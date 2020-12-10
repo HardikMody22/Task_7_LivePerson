@@ -23,3 +23,9 @@ Find the errors:
    Add two new routes. First route will only return id, firstName, lastName  of ALL records
    second route will require a "id" query param (pk of the record id),  which will return the entire record of that id
    (keeping in mind if no orm then sanitization is happening etc)
+   
+   
+   How To Run
+   1) Create a Schema in mysql on your local with id : root , password: password
+   2) Run the db.mysql script
+   3) make a .env file and specify the PORT={DESIRED_PORT_NUMBER} there
