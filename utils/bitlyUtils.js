@@ -1,4 +1,5 @@
 const got = require("got");
+require("dotenv").config();
 module.exports = {
   getShortUrl: function (url, token) {
     var options = {
@@ -14,7 +15,6 @@ module.exports = {
     return got
       .post("https://api-ssl.bitly.com/v4/shorten", options)
       .then((response) => {
-        console.log(response.body);
         return Promise.resolve({
           success: true,
           shortUrl: JSON.parse(response.body).link,
